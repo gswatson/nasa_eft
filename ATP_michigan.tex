@@ -1,0 +1,825 @@
+\documentclass[useAMS,12pt]{article}
+%\usepackage{fullpage}% 1 inch margins 
+%\usepackage{epsfig}
+\usepackage{graphicx}
+\usepackage{comment}
+
+%\usepackage{deluxetable}
+\usepackage{amssymb}
+\usepackage{mathrsfs}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{url}
+
+%\usepackage{draftwatermark}
+%\SetWatermarkScale{5}
+
+\pagestyle{myheadings}\makeatletter
+\pagenumbering{arabic}  
+
+\usepackage{color}
+\newcommand{\hilight}[1]{\colorbox{yellow}{#1}}
+
+\usepackage[
+top    = 1in,
+bottom = 1in,
+left   = 1in,
+right  = 1in]{geometry}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage[square,sort,comma,numbers,compress]{natbib}
+\usepackage{enumerate}
+\usepackage{graphicx,wasysym}
+\usepackage{hyperref}
+
+%
+\pagestyle{fancy}
+%\lhead{\footnotesize \parbox{11cm}{NNH10ZDA001N-ATP}}
+%\lfoot{\footnotesize \parbox{11cm}{\textit{2}}}
+%\cfoot{\footnotesize \thepage}
+%\rhead{\footnotesize \parbox{11cm}{Probing Inflation with LSS}}
+%\rfoot{\footnotesize Page \thepage\ of \pageref{LastPage}}
+%\renewcommand{\headheight}{24pt}
+%\renewcommand{\footrulewidth}{0.4pt}
+\fancyhead{}
+\fancyfoot{}
+\fancyhead[L]{ROSES16-NNH16ZDA001N-ATP}
+\fancyhead[R]{Toward a Systematic Approach To Dark Energy}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.1pt}
+\renewcommand{\footrulewidth}{0.1pt}
+%
+%ROSES 2010	<PROGRAM NAME>%
+%NRA NNH16ZDA001N	<YOUR PROPOSAL NAME>
+\newcommand  \beq    {\begin{equation}}
+\newcommand  \cm     {{\rm \,cm}}
+\newcommand  \eeq    {\end{equation}}
+\newcommand  \gtsim  {\lower.5ex\hbox{$\; \buildrel > \over \sim \;$}}
+\newcommand  \ltsim  {\lower.5ex\hbox{$\; \buildrel < \over \sim \;$}}
+\newcommand{\lap}{$\stackrel{<}{_\sim}$}
+\newcommand{\gap}{$\stackrel{>}{_\sim}$}
+
+\newcommand{\Expect}[1]{\left\langle #1 \right\rangle}
+\renewcommand{\k}{\ensuremath{\bm{k}}}
+\newcommand{\fnl}{\ensuremath{f_{\rm NL}}}
+%\newcommand{\fnl}{$f_{{\rm NL}}^{} $ }
+\newcommand{\gnl}{$g_{{\rm NL}}^{} $ }
+\newcommand{\lya}{Ly$\alpha$ }
+\newcommand{\etal}{\emph{et al.}}
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ei}{\end{itemize}}
+\newcommand{\neal}[1]{\textcolor{red}{\bf[#1]}}
+\newcommand{\ud}{{\rm d}}
+\newcommand{\drm}{\mathrm{d}}
+\newcommand{\rhos}{\rho_\phi}
+\newcommand{\rhor}{\rho_r}
+\newcommand{\pr}{p_r}
+\newcommand{\rhom}{\rho_\mathrm{dm}}
+\newcommand{\rhost}{\tilde{\rho}_\phi}
+\newcommand{\gam}{\Gamma_\phi}
+
+
+
+\def\ds{\displaystyle}
+\def\Sun{\odot}
+\def\sun{\hbox{$\odot$}}
+\def\hmsun{{\it h}$^{-1}$\,{\rm M$_\Sun$} }
+\def\hmpcinv{{\it h}\,{\rm Mpc}$^{-1}$ }
+\def\hmpc{{\it h}$^{-1}$\,{\rm Mpc} }
+\def\eg{{\it e.g.~}}
+\def\etal{{\it et al.~}}
+\def\ie{{\it i.e.~}}
+\def\ben{\begin{enumerate}}
+\def\een{\end{enumerate}}
+\def\bi{\begin{itemize}}
+\def\ei{\end{itemize}}
+\def\be{\begin{equation}}
+\def\ee{\end{equation}}
+\def\bea{\begin{eqnarray}}
+\def\eea{\end{eqnarray}}
+\def\vecx{{\bf x}}
+\def\veck{{\bf k}}
+\def\Oli#1{\noindent{\bf[$\diamondsuit$ #1]}}
+
+\newfont{\swell}{cmbx12 scaled 1000}
+
+\newcommand{\sw}[1]{\textcolor{red}{[{\bf SW}: #1]}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\pagenumbering{roman}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\makeatletter
+\def\tableofcontents{%
+\newpage
+%\centerline{\bf TABLE OF CONTENTS}
+\centerline{\large\scshape Table of Contents}
+\@mkboth{CONTENTS}{CONTENTS}
+\setlength{\parskip}{1pt}
+%\setlength{\parsep}{1pt}
+%\setlength{\headsep}{0pt}
+%\setlength{\topskip}{0pt}
+%\setlength{\topmargin}{0pt}
+%\setlength{\topsep}{0pt}
+%\setlength{\partopsep}{0pt}
+\@starttoc{toc}
+}
+\makeatother
+
+\pagenumbering{roman}
+%\addtocontents{toc}{\protect\thispagestyle{empty}}
+%\thispagestyle{empty}
+%\cleardoublepage
+%\renewcommand{\contentsname}{Table of contents}
+%\addtocontents{toc}{\protect\thispagestyle{empty}}
+%\setcounter{tocdepth}{2}
+%\tableofcontents
+%\begin{spacing}{0.1}
+\tableofcontents
+%\end{spacing}
+
+\newpage
+
+\setlength{\parskip}{1pt}
+\thispagestyle{empty}
+
+\centerline{\LARGE \bf Toward a Systematic Approach To Dark Energy}
+
+
+%\setcounter{pagenumber}{1}
+
+%=======================================
+\section{Scientific/Technical/Management Section}
+%=======================================
+\pagenumbering{arabic}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Executive Summary and Overview}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsubsection{Results from Prior NASA Support}
+Created the EFT of dark energy in two forms (Zurek and Flanagan papers). Paper with Rachel.
+Our approach was discussed by Planck.
+
+Dragan NASA work here too.
+
+\subsection{Effective Field Theory Approach to Cosmic Acceleration}
+\subsubsection{Introduction and Motivation}
+
+As the quality of data from cosmological observations continues to improve it is crucial to establish a robust and systematic way to scrutinize theoretical proposals aiming to account for the 
+cosmic acceleration or {\em dark energy}.  Perhaps the simplest proposal that can account for observations is a cosmological constant, but a convincing derivation from a fundamental theory remains an open challenge.  Moreover, the early acceleration of the universe -- cosmic inflation -- is not consistent with a cosmological constant (as demonstrated by the existence of scalar density perturbations).  For these and other reasons, there has been a large effort in the community to find alternative explanations and this has led to a rapidly increasing number of models.
+Checking models for theoretical consistency and establishing observational implications is typically done one model at a time and connections between different approaches are rarely discussed. 
+
+The problem of searching for new physics given a large number of theoretical possibilities is not unique to cosmology.  In particle physics and condensed matter systems the framework of Effective Field Theory (EFT) has proven to be very successful at this endeavor (for reviews see \cite{Kaplan:2005es,Burgess:2007pt}). The procedure is to construct the most general theory for observables that is compatible with the expected symmetries of the theory.  The terms in the action can then be constrained by a combination of data from experiments, as well as ensuring theoretical self-consistency.   The former requires finding an appropriate parameterization of the fundamental parameters and connecting them with the available observables, whereas the latter requires enforcing notions such as unitarity and consistency where the theory has already been well established.
+The application of the EFT approach to cosmology was first carried out for the case of inflation~\cite{Cheung:2007st,Weinberg:2008hq,Senatore:2010wk}, where it helped accomplish a 
+deeper understanding of the connection between fundamental symmetries and the mechanism driving inflation.  Moreover, the parametrization was also useful in identifying the characteristic shapes of non-gaussianity for classes of inflationary models \cite{Ade:2015ava}.
+\\
+
+\noindent{\bf EFT in the Linear Regime.}
+The EFT approach was first adapted to the study of dark energy by the PI and collaborators in \cite{Park:2010cw}.  This approach constructs a single theory (Lagrangian) that not only captures models that use dynamics of new fields to account for cosmic acceleration (such as quintessence), but also models that rely on a modification of General Relativity on large scales.
+In this way, both approaches to cosmic acceleration are unified into a single underlying framework, where
+the presence of dark matter and baryons and their possible interactions with dark energy are also captured.  Different classes of models correspond to different parameter choices within the EFT, and then these parameters can be restricted by observations. As an example, in \cite{Mueller:2012kb} the PI and collaborators demonstrated through an attractor analysis of the background evolution that the entire class of Gauss-Bonnet models are in tension with existing data.   
+\begin{figure}[t]
+\begin{center} 
+\includegraphics*[width=5.0in]{fig1.pdf}
+\end{center}
+\caption{{\bf Planck Collaboration Constraints on the EFT of Dark Energy \cite{Ade:2015rim}. } Marginalized posterior distributions at $68\,\%$ and $95\,\%$ C.L.
+for an assumed form of the EFT parameter $\Omega$ and its evolution. The plotted parameters $\alpha_{M0}$ and $\beta$ represent the departure from $\Lambda$CDM ($\alpha_{M0}=0$ corresponds to no modification) and how quickly the modification decreases in the past, respectively \cite{Ade:2015rim}.  
+The fact that $\Omega(t)$ is changing in time introduces non-zero anisotropic stress and modifications to lensing potentials, both signatures indicative of a modified gravitational sector.
+Note that {\em Planck} means {\em Planck} TT+lowP. Adding Weak Lensing (WL) to the data sets results
+in broader contours, as a
+consequence of the slight tension between the {\em Planck} and WL data sets \cite{Ade:2015rim}. \label{fig1}} 
+\end{figure}
+\\
+
+\noindent{\bf Non-linearities and Screening.}
+An important limitation of the EFT formulation of \cite{Park:2010cw} is that the development of non-linearities in the background cannot be captured within the EFT framework (the derivative expansion of the Lagrangian becomes ill-defined).  This is of particular importance for models of modified gravity, where recovering the predictions of General Relativity and consistency with solar system tests requires the background evolution to become highly non-linear -- e.g. in regions of high density leading to a screening mechanism c.f. \cite{Khoury:2003aq,Jain:2010ka,Hinterbichler:2010es}.  Thus, an important next step taken by the PI and collaborators \cite{Bloomfield:2012ff} (and independently by Gubitosi et. al. \cite{Gubitosi:2012hu}) was extending the EFT to the level of fluctuations and utilizing the Goldstone approach following building on a related analysis done in the context of inflation in \cite{Cheung:2007st}. The new EFT not only captures the linear models but also allows for non-linearities at the level of the background evolution.  Because the EFT is for the perturbations about any background (which an be taken {\em a priori} as $\Lambda$CDM) this allows one to compare observational predictions that will differentiate different classes of models.
+\\
+
+\noindent{\bf Capturing existing models.}
+There are at most seven free parameters (appearing in the fundamental Lagrangian) that describe the most general 
+theory of cosmic acceleration \cite{Gubitosi:2012hu,Bloomfield:2012ff}:
+$ \Omega,M_2, \bar M_1, \bar M_2, \bar M_3, \hat M, \nonumber
+m_2  $.
+Given these parameters it is possible to capture all existing dark energy and modified gravity models in the literature.
+Table~\ref{tab:models} gives the required choice of parameters to reproduce many of the more established and studied models in 
+the literature. 
+\begin{table}[t]
+  \centering
+  \begin{tabular}{|l||c|c|c|c|c|c|c|}
+    \hline
+    \textbf{Model parameter} &
+    \newline
+    $\Omega$ &    $M_2^4$ & $\bar{M}_1^3$ &
+    $\bar{M}_2^2$ &
+    $\bar{M}_3^2$ &
+    $\hat{M}^2$ &
+    $m_2^2$
+    \\ \hline
+    \hline
+    $\Lambda$CDM & 1 & - & - & - & - & - & - \\ \hline
+    Quintessence & 1/\checkmark & - & - & - & - & 
+- & - \\ \hline 
+    $f(R)$ & \checkmark & - & - & - & - & - & - \\ \hline 
+    $k$-essence & 1/\checkmark & \checkmark & - & 
+- & - & - & - \\ \hline 
+    Galileon {(Kinetic Braiding)} & 1/\checkmark & 
+\checkmark & \checkmark & - & - & - & - \\ \hline 
+    DGP & \checkmark & 
+\checkmark $\dagger$ & \checkmark & - & - & - & - \\ \hline 
+    Ghost Condensate & 1/\checkmark & - & - & \checkmark & 
+\checkmark & - & - \\ \hline 
+    Horndeski {(Generalized Galileon)} & \checkmark & \checkmark & \checkmark & \checkmark $\dagger$ & 
+\checkmark $\dagger$ & \checkmark $\dagger$ & - \\ \hline
+    Ho\v{r}ava-Lifshitz & 1 & - & - & \checkmark & - & - & 
+\checkmark \\ \hline 
+  \end{tabular}
+  \caption[]{
+    {\bf EFT Parameter choices to reproduce  prominent models in the literature} (See \cite{Bloomfield:2012ff} for details). \\ 
+    \begin{tabular}{p{2cm}cp{0.7 \textwidth}}
+      &\checkmark & Parameter is non-zero\\
+      &- & Parameter vanishes\\
+      &1 & Parameter is unity\\
+      &1/\checkmark & Minimally and non-minimally coupled versions of this 
+model exist\\
+      &$\dagger$ & Coefficients marked with a dagger are linearly related 
+to other coefficients in that model by numerical coefficients 
+    \end{tabular}
+  }
+\label{tab:models}
+\end{table}
+ For example, linearized Horndeski theory (or equivalently generalized Galileon theory) 
+is reproduced by the parameter choice $m_2=0, \hat{M}^2=\bar{M}_2^2/2=-\bar{M}_3^2/2$. 
+The generality of this approach is useful in that it can capture all consistent models and allows for the explorations
+of new ones.  The EFT parameters can be directly connected to observables, and in this way observations can help identify 
+the regions of parameter space most relevant for detailed model building. As a first step in this direction, the EFT method has been incorporated into
+CAMB \cite{silvestri} and was used by the Planck Collaboration to restrict classes of dark energy models that result from particular choices of the EFT parameters (see Figure \ref{fig1}). 
+One focus of the proposed research will be to improve upon this approach and make a more direct connections with observations.
+
+
+
+\subsubsection{Proposed Research}
+{\bf Theoretical Consistency -- What is a consistent model?}
+\begin{itemize}
+\item Black hole thermodynamics
+\item Strong coupling
+\item Equivalence Principle
+\item Instabilities (radiative, ghost, tachyon, caustics)
+\item \ldots
+\end{itemize}
+ In addition to the EFT background approach, one may also consider imposing symmetries on non-linear backgrounds to retain a well defined Cauchy problem.  In the EFT approach, this is never a concern since for energies below the cutoff of the theory, the number of degrees of freedom remains fixed, and higher time derivatives never appear in the equations of motion \cite{Weinberg:2008hq}.  However, as shown long ago by Horndeski \cite{1974IJTP...10..363H}, by restricting the operators to be considered in the action it is possible to construct non-linear backgrounds that give rise to only two derivatives acting on fields at the level of the equations of motion.  These models are less general than the EFT approach, but in addition to being able to capture non-linearities they also exhibit interesting self-tuning properties.  The authors of \cite{Charmousis:2011bf} recently studied these actions identifying four terms that are important for classifying these scalar-tensor theories.  Given our EFT approach, these terms are captured at leading order by the action to be considered below, but the full non-linear effects will not be captured.  
+\\
+
+\noindent{\bf Generating New Classes of Consistent Models?}
+\\
+
+\noindent{\bf Modifications of Gravity}
+\\
+
+\noindent{\bf Screening Mechanisms}
+\\ 
+
+\sw{Ideas to incorporate:}
+\begin{itemize}
+\item Using the restrictive symmetries of the Goldstone approach Watson will work to establish universality classes within dark energy and modified gravity in much the same way that has been done for inflation (and particle physics and condensed matter systems).  There are substantial technical challenges given the complication of the Lagrangian, the presence of matter, and possible interactions between the sectors. One way in which a simplification can be achieved is utilizing the fact that the background evolution is very close to deSitter space (dS) at low-redshifts. This approach has been useful in studying existing models, such as in Horndeski gravity. Performing a parameter expansion about dS can then make the EFT approach more tractable. Moreover, when the EFT is used for observations at higher redshifts, it is then appropriate to perform an expansion about the matter dominated background.  Although it presents an important and open conceptual challenge to connect the two phases, observations at this time are mostly lacking.  Such an approach has been taken in past, model specific studies of modified gravity. 
+\item Stability is an important issue for any proposed model.  Much work has gone into establishing theories that are ghost free and result in two-derivative equations of motion in order to avoid instabilities. The EFT approach is particularly useful in investigating such pathologies. Indeed, one of the first appearances of EFT techniques in cosmology was to establish the regime of stability in DGP models \cite{Luty:2003vm} and in Ghost Condensation \cite{ArkaniHamed:2003uy}.
+Using the EFT of dark energy, Watson and collaborators will work to establish how theoretical self-consistencies like stability and unitarity can place constraints on models. 
+\item Establishing the connection between observations and the EFT parameters is an important goal.  One immediate place to focus is on distinguishing dark energy from modified gravity.  Two key observables are the Newtonian potential $\Phi$ and the gravitational slip $\eta=\Phi / \Psi$, where $\Psi$ is the relativistic potential (Longitudinal gauge).  The motion of non-relativistic particles (e.g.  galaxy formation) is sensitive to the former, whereas relativistic particles and light (e.g. gravitational lensing) are to the latter.  In modified gravity theories one expects $\eta \neq 1$ and a departure from the prediction of General Relativity with perfect fluids where $\eta=1$.  These and related observations have been used by the community to test existing -- model specific -- approaches. Watson will invoke the EFT approach to establish a systematic way to distinguish modified gravity and dark energy using these and other observations.  As a proof of principle, it was shown in \cite{Gubitosi:2012hu,Bloomfield:2012ff} that the EFT captures both $f(R)$ gravity and DGP gravity, both of which have been shown to be in tension with data.  The EFT not only captures these models but shows how they arise as special cases of a larger class of models.
+\end{itemize}
+
+
+ 
+\subsection{Connection to Observations} 
+Observational constraints:  Lensing, structure, growth, lunar ranging... (DGP and F(R) good examples of ruled out.  Ways to distinguish modification from other.)
+\\
+
+{\bf Dragan's comments:}
+
+Observation: yes, I do have a pretty clear picture of way to go, at least very generally. Which is to funnel all this complicated (to me) theory stuff into intermediate-level cosmological functions (for lack of better name): growth, distance/geometry, perhaps also principal components of some sort. I have to think a bit more to write pages of the proposal, but this is the way to go. You know I am a fan of this, but I think that this growth/distance business is more widely considered as a very good meeting point between theory and obs. 
+
+- *very* general MG models that are consistent, to
+- space where observers can easily compare to data, and compute the 
+- range of possibilities (“error bar on theory”) spanned by these MG models. 
+
+%=====================================================
+\subsection{Relevance to NASA Programs and NRA}
+%=====================================================
+This continuing program is representative of NASA’s goals and strategic plan, specifically in relation to “Strategic Goal 2: Expand scientific understanding of the Earth and the universe in which we live” and more precisely “Objective 2.4.1: Improve understanding of the origin and destiny of the universe, and the nature of black holes, dark energy, dark matter, and gravity”.  The proposed research is relevant to two categories set forth in the Astrophysics Theory Program: (8) Large Scale Cosmic Structures and Dark Matter (e.g., clusters of galaxies, galaxy environment and evolution, intracluster medium, diffuse photon backgrounds) and (9) Dark Energy and the Cosmic Microwave Background (e.g., theoretical studies of cosmological observation techniques, theoretical cosmology, dark energy models).  The project is timely in that it will utilize rapidly improving data from existing NASA experiments such as Fermi and Planck.  {\bf UPDATE THIS!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Impact on the State of Knowledge}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+{\bf ARE WE SUPPOSED TO HAVE THIS SECTION?}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%==========================================
+\subsection{Work Plan and Management Structure}
+%==========================================
+
+%===============
+\subsection{References}
+%===============
+
+
+\begingroup
+\renewcommand{\section}[2]{}%
+%\renewcommand{\chapter}[2]{}% for other classes
+\begin{thebibliography}{}
+
+%\cite{Kaplan:2005es}
+\bibitem{Kaplan:2005es} 
+  D.~B.~Kaplan,
+  %``Five lectures on effective field theory,''
+  nucl-th/0510023.
+  %%CITATION = NUCL-TH/0510023;%%
+  %70 citations counted in INSPIRE as of 22 Jun 2016
+
+
+%\cite{Burgess:2007pt}
+\bibitem{Burgess:2007pt} 
+  C.~P.~Burgess,
+  %``Introduction to Effective Field Theory,''
+  Ann.\ Rev.\ Nucl.\ Part.\ Sci.\  {\bf 57}, 329 (2007)
+  doi:10.1146/annurev.nucl.56.080805.140508
+  [hep-th/0701053].
+  %%CITATION = doi:10.1146/annurev.nucl.56.080805.140508;%%
+  %102 citations counted in INSPIRE as of 22 Jun 2016
+
+
+%\cite{Cheung:2007st}
+\bibitem{Cheung:2007st} 
+  C.~Cheung, P.~Creminelli, A.~L.~Fitzpatrick, J.~Kaplan and L.~Senatore,
+  %``The Effective Field Theory of Inflation,''
+  JHEP {\bf 0803}, 014 (2008)
+  doi:10.1088/1126-6708/2008/03/014
+  [arXiv:0709.0293 [hep-th]].
+  %%CITATION = doi:10.1088/1126-6708/2008/03/014;%%
+  %462 citations counted in INSPIRE as of 22 Jun 2016
+
+
+%\cite{Weinberg:2008hq}
+\bibitem{Weinberg:2008hq} 
+  S.~Weinberg,
+  %``Effective Field Theory for Inflation,''
+  Phys.\ Rev.\ D {\bf 77}, 123541 (2008)
+  doi:10.1103/PhysRevD.77.123541
+  [arXiv:0804.4291 [hep-th]].
+  %%CITATION = doi:10.1103/PhysRevD.77.123541;%%
+  %215 citations counted in INSPIRE as of 22 Jun 2016
+
+
+%\cite{Senatore:2010wk}
+\bibitem{Senatore:2010wk} 
+  L.~Senatore and M.~Zaldarriaga,
+  %``The Effective Field Theory of Multifield Inflation,''
+  JHEP {\bf 1204}, 024 (2012)
+  doi:10.1007/JHEP04(2012)024
+  [arXiv:1009.2093 [hep-th]].
+  %%CITATION = doi:10.1007/JHEP04(2012)024;%%
+  %120 citations counted in INSPIRE as of 22 Jun 2016
+
+
+%\cite{Ade:2015ava}
+\bibitem{Ade:2015ava} 
+  P.~A.~R.~Ade {\it et al.} [Planck Collaboration],
+  %``Planck 2015 results. XVII. Constraints on primordial non-Gaussianity,''
+  arXiv:1502.01592 [astro-ph.CO].
+  %%CITATION = ARXIV:1502.01592;%%
+  %198 citations counted in INSPIRE as of 22 Jun 2016
+
+
+%\cite{Park:2010cw}
+\bibitem{Park:2010cw} 
+  M.~Park, K.~M.~Zurek and S.~Watson,
+  %``A Unified Approach to Cosmic Acceleration,''
+  Phys.\ Rev.\ D {\bf 81}, 124008 (2010)
+  doi:10.1103/PhysRevD.81.124008
+  [arXiv:1003.1722 [hep-th]].
+  %%CITATION = doi:10.1103/PhysRevD.81.124008;%%
+  %44 citations counted in INSPIRE as of 22 Jun 2016
+
+%\cite{Mueller:2012kb}
+\bibitem{Mueller:2012kb} 
+  E.~M.~Mueller, R.~Bean and S.~Watson,
+  %``Cosmological implications of the effective field theory of cosmic acceleration,''
+  Phys.\ Rev.\ D {\bf 87}, no. 8, 083504 (2013)
+  doi:10.1103/PhysRevD.87.083504
+  [arXiv:1209.2706 [astro-ph.CO]].
+  %%CITATION = doi:10.1103/PhysRevD.87.083504;%%
+  %25 citations counted in INSPIRE as of 22 Jun 2016
+
+%\cite{Bloomfield:2012ff}
+\bibitem{Bloomfield:2012ff} 
+  J.~K.~Bloomfield, É.~É.~Flanagan, M.~Park and S.~Watson,
+  %``Dark energy or modified gravity?  An effective field theory approach,''
+  JCAP {\bf 1308}, 010 (2013)
+  doi:10.1088/1475-7516/2013/08/010
+  [arXiv:1211.7054 [astro-ph.CO]].
+  %%CITATION = doi:10.1088/1475-7516/2013/08/010;%%
+  %90 citations counted in INSPIRE as of 22 Jun 2016
+
+
+%\cite{Gubitosi:2012hu}
+\bibitem{Gubitosi:2012hu} 
+  G.~Gubitosi, F.~Piazza and F.~Vernizzi,
+  %``The Effective Field Theory of Dark Energy,''
+  JCAP {\bf 1302}, 032 (2013)
+  [JCAP {\bf 1302}, 032 (2013)]
+  doi:10.1088/1475-7516/2013/02/032
+  [arXiv:1210.0201 [hep-th]].
+  %%CITATION = doi:10.1088/1475-7516/2013/02/032;%%
+  %102 citations counted in INSPIRE as of 22 Jun 2016
+
+%\cite{Ade:2015rim}
+\bibitem{Ade:2015rim} 
+  P.~A.~R.~Ade {\it et al.} [Planck Collaboration],
+  %``Planck 2015 results. XIV. Dark energy and modified gravity,''
+  arXiv:1502.01590 [astro-ph.CO].
+  %%CITATION = ARXIV:1502.01590;%%
+  %160 citations counted in INSPIRE as of 23 Jun 2016
+
+%\cite{Khoury:2003aq}
+\bibitem{Khoury:2003aq} 
+  J.~Khoury and A.~Weltman,
+  %``Chameleon fields: Awaiting surprises for tests of gravity in space,''
+  Phys.\ Rev.\ Lett.\  {\bf 93}, 171104 (2004)
+  doi:10.1103/PhysRevLett.93.171104
+  [astro-ph/0309300].
+  %%CITATION = doi:10.1103/PhysRevLett.93.171104;%%
+  %771 citations counted in INSPIRE as of 22 Jun 2016
+
+
+%\cite{Jain:2010ka}
+\bibitem{Jain:2010ka} 
+  B.~Jain and J.~Khoury,
+  %``Cosmological Tests of Gravity,''
+  Annals Phys.\  {\bf 325}, 1479 (2010)
+  doi:10.1016/j.aop.2010.04.002
+  [arXiv:1004.3294 [astro-ph.CO]].
+  %%CITATION = doi:10.1016/j.aop.2010.04.002;%%
+  %139 citations counted in INSPIRE as of 22 Jun 2016
+
+
+%\cite{Hinterbichler:2010es}
+\bibitem{Hinterbichler:2010es} 
+  K.~Hinterbichler and J.~Khoury,
+  %``Symmetron Fields: Screening Long-Range Forces Through Local Symmetry Restoration,''
+  Phys.\ Rev.\ Lett.\  {\bf 104}, 231301 (2010)
+  doi:10.1103/PhysRevLett.104.231301
+  [arXiv:1001.4525 [hep-th]].
+  %%CITATION = doi:10.1103/PhysRevLett.104.231301;%%
+  %216 citations counted in INSPIRE as of 22 Jun 2016
+
+
+%\cite{Creminelli:2008wc}
+\bibitem{Creminelli:2008wc} 
+  P.~Creminelli, G.~D'Amico, J.~Norena and F.~Vernizzi,
+  %``The Effective Theory of Quintessence: the w<-1 Side Unveiled,''
+  JCAP {\bf 0902}, 018 (2009)
+  doi:10.1088/1475-7516/2009/02/018
+  [arXiv:0811.0827 [astro-ph]].
+  %%CITATION = doi:10.1088/1475-7516/2009/02/018;%%
+  %126 citations counted in INSPIRE as of 22 Jun 2016
+
+
+\bibitem{silvestri} 
+  B.~Hu, M.~Raveri, N.~Frusciante and A.~Silvestri,
+  %``Effective Field Theory with CAMB,''
+  \url{http://wwwhome.lorentz.leidenuniv.nl/~hu/codes/}.
+  %%CITATION = doi:10.1103/PhysRevLett.108.051101;%%
+  %171 citations counted in INSPIRE as of 22 Jun 2016
+  
+  %\cite{Horndeski:1974wa}
+\bibitem{Horndeski:1974wa} 
+  G.~W.~Horndeski,
+  %``Second-order scalar-tensor field equations in a four-dimensional space,''
+  Int.\ J.\ Theor.\ Phys.\  {\bf 10}, 363 (1974).
+  doi:10.1007/BF01807638
+  %%CITATION = doi:10.1007/BF01807638;%%
+  %503 citations counted in INSPIRE as of 23 Jun 2016
+
+%\cite{Charmousis:2011bf}
+\bibitem{Charmousis:2011bf} 
+  C.~Charmousis, E.~J.~Copeland, A.~Padilla and P.~M.~Saffin,
+  %``General second order scalar-tensor theory, self tuning, and the Fab Four,''
+  Phys.\ Rev.\ Lett.\  {\bf 108}, 051101 (2012)
+  doi:10.1103/PhysRevLett.108.051101
+  [arXiv:1106.2000 [hep-th]].
+  %%CITATION = doi:10.1103/PhysRevLett.108.051101;%%
+  %171 citations counted in INSPIRE as of 22 Jun 2016
+
+
+%\cite{Ferreira:1997hj}
+\bibitem{Ferreira:1997hj} 
+  P.~G.~Ferreira and M.~Joyce,
+  %``Cosmology with a primordial scaling field,''
+  Phys.\ Rev.\ D {\bf 58}, 023503 (1998)
+  doi:10.1103/PhysRevD.58.023503
+  [astro-ph/9711102].
+  %%CITATION = doi:10.1103/PhysRevD.58.023503;%%
+  %647 citations counted in INSPIRE as of 22 Jun 2016
+
+
+%\cite{Wetterich:1994bg}
+\bibitem{Wetterich:1994bg} 
+  C.~Wetterich,
+  %``The Cosmon model for an asymptotically vanishing time dependent cosmological 'constant',''
+  Astron.\ Astrophys.\  {\bf 301}, 321 (1995)
+  [hep-th/9408025].
+  %%CITATION = HEP-TH/9408025;%%
+  %631 citations counted in INSPIRE as of 22 Jun 2016
+
+
+%\cite{Bean:2008ac}
+\bibitem{Bean:2008ac} 
+  R.~Bean, E.~E.~Flanagan, I.~Laszlo and M.~Trodden,
+  %``Constraining Interactions in Cosmology's Dark Sector,''
+  Phys.\ Rev.\ D {\bf 78}, 123514 (2008)
+  doi:10.1103/PhysRevD.78.123514
+  [arXiv:0808.1105 [astro-ph]].
+  %%CITATION = doi:10.1103/PhysRevD.78.123514;%%
+  %116 citations counted in INSPIRE as of 22 Jun 2016
+
+
+%\cite{Amendola:2006kh}
+\bibitem{Amendola:2006kh} 
+  L.~Amendola, D.~Polarski and S.~Tsujikawa,
+  %``Are f(R) dark energy models cosmologically viable ?,''
+  Phys.\ Rev.\ Lett.\  {\bf 98}, 131302 (2007)
+  doi:10.1103/PhysRevLett.98.131302
+  [astro-ph/0603703].
+  %%CITATION = doi:10.1103/PhysRevLett.98.131302;%%
+  %334 citations counted in INSPIRE as of 22 Jun 2016
+
+
+%\cite{Copeland:1997et}
+\bibitem{Copeland:1997et} 
+  E.~J.~Copeland, A.~R.~Liddle and D.~Wands,
+  %``Exponential potentials and cosmological scaling solutions,''
+  Phys.\ Rev.\ D {\bf 57}, 4686 (1998)
+  doi:10.1103/PhysRevD.57.4686
+  [gr-qc/9711068].
+  %%CITATION = doi:10.1103/PhysRevD.57.4686;%%
+  %789 citations counted in INSPIRE as of 22 Jun 2016
+
+
+%\cite{Hu:2007nk}
+\bibitem{Hu:2007nk} 
+  W.~Hu and I.~Sawicki,
+  %``Models of f(R) Cosmic Acceleration that Evade Solar-System Tests,''
+  Phys.\ Rev.\ D {\bf 76}, 064004 (2007)
+  doi:10.1103/PhysRevD.76.064004
+  [arXiv:0705.1158 [astro-ph]].
+  %%CITATION = doi:10.1103/PhysRevD.76.064004;%%
+  %879 citations counted in INSPIRE as of 22 Jun 2016
+
+
+%\cite{Luty:2003vm}
+\bibitem{Luty:2003vm} 
+  M.~A.~Luty, M.~Porrati and R.~Rattazzi,
+  %``Strong interactions and stability in the DGP model,''
+  JHEP {\bf 0309}, 029 (2003)
+  doi:10.1088/1126-6708/2003/09/029
+  [hep-th/0303116].
+  %%CITATION = doi:10.1088/1126-6708/2003/09/029;%%
+  %486 citations counted in INSPIRE as of 22 Jun 2016
+
+
+%\cite{ArkaniHamed:2003uy}
+\bibitem{ArkaniHamed:2003uy} 
+  N.~Arkani-Hamed, H.~C.~Cheng, M.~A.~Luty and S.~Mukohyama,
+  %``Ghost condensation and a consistent infrared modification of gravity,''
+  JHEP {\bf 0405}, 074 (2004)
+  doi:10.1088/1126-6708/2004/05/074
+  [hep-th/0312099].
+  %%CITATION = doi:10.1088/1126-6708/2004/05/074;%%
+  %699 citations counted in INSPIRE as of 22 Jun 2016
+  
+  \end{thebibliography}
+\endgroup
+
+
+\newpage
+%===============================
+\section{Biographical Sketch}
+%===============================
+\subsection{S. Watson (PI)}
+\begin{center}
+{\bf{\large Scott Watson (PI)}}\smallskip
+
+Associate Professor, Syracuse University Physics Department\\
+
+201 Physics Building, Syracuse, NY 13244\smallskip
+\end{center}
+
+\bigskip
+\noindent {\bf (i) Professional Preparation}\\[-0.3cm]
+
+1) Undergraduate Institution: University of North Carolina Wilmington, 1995 -- 2000 \\
+Bachelor of Science in Mathematics and Physics\\[-0.3cm]
+
+2) Graduate Institution: Brown University, Ph.D. in Theoretical Physics, 2000 -- 2005\\
+{\em NASA Graduate Student Research Program Fellow (2002-2004)}\\[-0.3cm]
+
+3) Postdoctoral Researcher: University of Toronto, 2005-2007\\
+
+\bigskip
+\noindent {\bf (ii) Appointments}\\[-0.3cm]
+
+1) Associate Professor of Physics, Syracuse University, 2016 -- present\\[-0.3cm]
+
+2) Assistant Professor of Physics, Syracuse University, 2010 -- 2016\\[-0.3cm]
+
+3) Associate Member and Visiting Professor, Cornell University, 2010 -- present\\[-0.3cm]
+
+4) Associate Member, Michigan Center for Theoretical Physics, 2007 -- present\\[-0.3cm]
+
+5) Research Professor, University of Michigan, 2007 -- 2009\\
+
+\bigskip
+\noindent {\bf (iii) Selected Service and Outreach} \\[-0.3cm]
+
+1) CMB-S4 Collaboration Working Group (2015 -- present)\\[-0.3cm]
+
+2) NASA Inflation Probe Study Analysis Group (IPSAG) (2011 -- present)\\[-0.3cm]
+
+3) NASA Primordial Polarization Program Definition Team (PPPDT) (2008 -- 2009)\\[-0.3cm]
+
+4) CMBPol Mission Concept Theory Working Group (2008 -- 2009)\\
+
+\bigskip
+\noindent {\bf (iv) Selected Publications} \\[-0.3cm]
+
+\begin{enumerate}
+\item{``Non-thermal WIMPs and Primordial Black Holes'',
+J.~Georg, G.~Sengor, and S.~Watson,
+ arXiv:1603.00023 [hep-th], Accepted for Publication in PRD.}
+\item{  ``Cosmological Moduli and the Post-Inflationary Universe: A Critical Review'',
+G.~Kane, K.~Sinha and S.~Watson, {\it Invited review for} Int.\ J.\ Mod.\ Phys.\ D {\bf 24}, no. 08, 1530022 (2015)}
+\item{``How Well Can We Really Determine the Scale of Inflation?'', O.~Ozsoy, K.~Sinha and S.~Watson, Phys.\ Rev.\ D {\bf 91}, no. 10, 103509 (2015)}
+\item{``Nonthermal histories and implications for structure formation'',
+J.~Fan, O.~Ozsoy and S.~Watson, Phys.\ Rev.\ D {\bf 90}, no. 4, 043536 (2014)}
+\item{``Supersymmetry, Nonthermal Dark Matter and Precision Cosmology'',
+R.~Easther, R.~Galvez, O.~Ozsoy and S.~Watson,Phys.\ Rev.\ D {\bf 89}, no. 2, 023522 (2014)}
+\item{  ``Dark energy or modified gravity?  An effective field theory approach'',
+J.~K.~Bloomfield, E.~E.~Flanagan, M.~Park and S.~Watson,
+JCAP {\bf 1308}, 010 (2013)}
+\item{``Cosmological implications of the effective field theory of cosmic acceleration'',
+E.~M.~Mueller, R.~Bean and S.~Watson, Phys.\ Rev.\ D {\bf 87}, no. 8, 083504 (2013)}
+\item{``A Unified Approach to Cosmic Acceleration'', M.~Park, K.~M.~Zurek and S.~Watson,
+Phys.\ Rev.\ D {\bf 81}, 124008 (2010)}
+\item{  ``Reevaluating the Cosmological Origin of Dark Matter'',
+S. Watson,
+In {\em Perspectives on supersymmetry II},
+pages 305--324. World Scientific, Singapore, 2009.}
+\item{``Non-thermal Dark Matter and the Moduli Problem in String Frameworks'',
+  B.~S.~Acharya, P.~Kumar, K.~Bobkov, G.~Kane, J.~Shao and S.~Watson,
+  JHEP {\bf 0806}, 064 (2008).}
+\end{enumerate}
+
+\subsection{D. Huterer (Co-PI)}
+\begin{center}
+{\bf{\large Dragan Huterer (Co-PI)}}\smallskip
+
+Associate Professor, University of Michigan\\
+3444 Randall Lab, 450 Church St., Ann Arbor, MI 48109 \smallskip
+\end{center}
+
+{\bf LIMITED TO ONE PAGE}
+
+
+
+%=============================
+\section{Current and pending support}
+%=============================
+
+%------------------------
+\subsection{S.\ Watson (PI)}
+%------------------------
+
+\subsubsection{Current Support}
+
+\begin{center}
+\begin{tabular}{|c|l|c|c|c|c|}
+\hline\hline
+\bf Award/Project Title & \bf PI & \bf Agency & \bf Budget &  \bf Period & \bf Effort\\
+\hline
+ Syracuse Research Program     & S. Catterall & DOE  & \$1,117,000 & FY{'}16 -- FY{'}19 & 24\% \\
+ % 2 months / 8.5 (SU months)
+in Elementary  Particle Physics  &  (Syracuse)  &     &&&\\
+\hline
+Establishing the     & S. Watson  & NASA & \$450,000 & FY{'}13 -- FY{'}16 & 12\% \\
+ % 1 month / 8.5 (SU months)
+Post-Inflationary History  &   &     &&& \\
+\hline
+\end{tabular}
+\end{center}
+
+\subsubsection{Pending Support}
+
+\begin{center}
+\begin{tabular}{|c|l|c|c|c|c|}
+\hline\hline
+\bf Award/Project Title & \bf PI & \bf Agency & \bf Budget &  \bf Period & \bf Effort\\
+\hline
+Searching for Beyond Standard    & L. Strigari  & NASA & \$470,171 & FY{'}17 -- FY{'}20 & 12\% \\
+ % 1 month / 8.5 (SU months)
+Thermal   Histories with  &   &  (D.3)   &&& \\
+Primordial Black Holes   &   &     &&& \\
+\hline
+\end{tabular}
+\end{center}
+
+
+%------------------------
+\subsection{D.\ Huterer (Co-PI)}
+%------------------------
+
+\subsubsection{Current Support}
+
+\subsubsection{Pending Support}
+
+
+
+
+%===============================
+\section{Budget Justification}
+%===============================
+
+%------------------------------------
+\subsection{Personnel and Work Effort}
+%------------------------------------
+The budget includes one month of the PI's (Watson) summer salary per year (for a total of three
+years); the PI plans to devote most of the academic year to conducting research and
+teaching activities related to this NASA proposal.
+Syracuse University faculty appointments are for 8.5 months.  Salaries are escalated by 3.0\%
+annually for budget preparation purposes; actual salaries in place during the time of the award are charged.
+
+The two graduate students will be fully funded with this grant.
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline\hline
+Name  & Role & Organization &\multicolumn{3}{|c|}{Work Commitment}\\
+&&& Year 1 & Year 2 & Year 3 \\\hline
+S. Watson  & PI & Syracuse University & 0.12 & 0.12 & 0.12 \\
+Graduate Student     & Graduate Student        & Syracuse University  & 1.0 & 1.0 & 1.0 \\
+Graduate Student     & Graduate Student        & University of Michigan  & 1.0 & 1.0 & 1.0 \\
+\hline
+\end{tabular}
+\end{center}
+
+%-------------------------------
+\subsection{Budget Narrative}
+%-------------------------------
+In the list directly below, detailed justification is given for each budget item requested from this grant supporting the PI, Co-PI's, the graduate students, and the postdoc at Syracuse University.
+\smallskip
+
+{\bf Senior Personnel Salaries and Wages}\\
+The budget includes one month of summer salary for the PI (for a total of three
+years); the PI plans to devote most of the academic year to conducting research and
+teaching activities related to this NASA ROSES proposal.
+Syracuse University faculty appointments are for 8.5 months.  Salaries are escalated by 3.0\%
+annually for budget preparation purposes; actual salaries in place during the time of the award are charged.
+\smallskip
+
+{\bf Other Personnel Salaries and Wages}\\
+The majority of the budget is dedicated to the support of two graduate students.
+They will conduct research and participate in all venues of
+this project throughout the designated period.
+The tuition in the budget assumes the student will be registered for at least nine credits per semester, in which case
+the Syracuse College of Arts and Sciences has agreed to cover one half of the tuition costs.
+The student salary has been subject to yearly increases to account for the effects of inflation.
+\smallskip
+
+{\bf Fringe Benefits}\\
+Fringe Benefits are calculated as direct costs in accordance with Syracuse University’s indirect cost rate agreement (Department of Health and Human Services), 17.0\% for faculty during the summer; 19.4\% for graduate students and 33.1\% for faculty during the year.
+Actual rates in place during the time of the award would be charged.
+\smallskip
+
+{\bf Travel}\\
+To further collaboration and sharing of research results support is requested for travel between Syracuse and the University of Michigan, as well as to communicate with other collaborators. Cost estimates for per diem, lodging, and rental car transportation are \$6,000 per year (to be shared equally between the PI and Co-PI). 
+\smallskip
+
+{\bf Indirect Costs}\\
+Indirect Costs: Syracuse University’s federally negotiated indirect cost rate agreement (Department of Health and Human Services, effective 1/17/2012), is currently 48.0\% of modified total direct costs (MTDC).  Syracuse University’s
+threshold for equipment is \$5,000.
+
+
+
+%% %-------------------------------
+\subsection{Budget Details}
+%% %-------------------------------
+Budget details with itemized costs appear on the next page for the total grant. Itemized details for the subcontract are presented on the page following.
+
+\end{document}
+
